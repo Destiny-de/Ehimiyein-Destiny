@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ultra Modern Portfolio — Your Name</title>
+  <meta name="description" content="Clean ultra-modern portfolio built with semantic HTML, CSS and vanilla JavaScript." />
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <h1>Your Name</h1>
+          <p>Front-end Engineer • UI Designer</p>
+        </div>
+      </div>
+
+      <nav>
+        <button class="btn link" data-scroll="#projects">Projects</button>
+        <button class="btn link" data-scroll="#about">About</button>
+        <a class="btn primary" href="email.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hello — I'm <span class="type" id="type-target">Your Name.</span></h2>
+        <p>I build clean, modern, high-performance websites and interfaces. I focus on performance, accessibility and delightful details.</p>
+
+        <div class="socials">
+          <a class="chip" href="#">GitHub</a>
+          <a class="chip" href="#">Dribbble</a>
+          <a class="chip" href="#">LinkedIn</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+          <a class="btn primary" href="#projects">See Work</a>
+          <a class="btn" href="email.html">Hire Me</a>
+        </div>
+
+        <div style="margin-top:20px;display:flex;gap:12px;align-items:center">
+          <div class="chip">Available for work</div>
+          <div class="small">Based in Lagos • Open to remote</div>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar">YN</div>
+        <div style="font-weight:700">Your Name</div>
+        <div class="small">Product-focused front-end developer</div>
+
+        <div class="stats" style="margin-top:8px">
+          <div class="stat">7+ Projects</div>
+          <div class="stat">4 yrs Exp</div>
+        </div>
+
+        <a class="btn" href="#" style="margin-top:12px">Download Resume</a>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h3 style="margin:0">Selected Projects</h3>
+        <div class="small">A few recent case studies</div>
+      </div>
+
+      <div class="grid">
+        <article class="project">
+          <h3>Streaming UI Revamp</h3>
+          <p>Design and build of a dark, high-performance streaming player with keyboard shortcuts and custom animations.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">Animations</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>E-Commerce Checkout</h3>
+          <p>Built a progressive, low-friction checkout flow improving conversions by focusing on clarity and speed.</p>
+          <div class="tags"><span class="tag">UX</span><span class="tag">Payments</span></div>
+        </article>
+
+        <article class="project">
+          <h3>Portfolio CMS</h3>
+          <p>Headless CMS + static site generator for fast content updates and excellent SEO.</p>
+          <div class="tags"><span class="tag">Jamstack</span><span class="tag">Node</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:36px">
+      <div class="section-title"><h3 style="margin:0">About</h3><div class="small">What I care about</div></div>
+      <div class="card">
+        <p class="small">I solve product problems with polished UI and pragmatic code. I enjoy working closely with product teams to ship thoughtful interfaces that scale. I care about accessibility, maintainability and measurable outcomes.</p>
+
+        <ul style="margin-top:12px;color:var(--muted);">
+          <li>Modern HTML/CSS architecture</li>
+          <li>Interactive micro-interactions</li>
+          <li>Performance tuning & Lighthouse optimizations</li>
+        </ul>
+      </div>
+    </section>
+
+  
+
+
+
+      
+
+        <div style="min-width:260px;flex:0.6">
+          <div class="small">Quick info</div>
+          <div class="card" style="margin-top:12px;padding:14px;border-radius:12px;">
+            <p class="small" style="margin:0">Based in Lagos, Nigeria — available for remote and freelance work. I typically respond within 24–48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="2025"></span> Ehimiyein Destiny • </div>
+    </footer>
+  </div>
+
+  <script src="home.js" defer></script>
+ <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+
+</body>
+</html>
