@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Destiny Ehimiyein</title>
+<link rel="icon" type="image/png" href="ChatGPT Image Oct 25, 2025, 11_41_45 AM.png ">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" defer></script>
+
+<style>
+:root{
+  --bg:white;--card:#ffffff;--muted:#6b7280;--accent:#5b21b6;--radius:18px;--shadow:0 8px 30px rgba(17,24,39,0.08);--maxw:1200px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:linear-gradient(180deg,var(--bg),#f3f4f6);color:#111827;-webkit-font-smoothing:antialiased;padding-bottom:80px}
+.container{max-width:var(--maxw);margin:10px;padding:9px;}
+
+
+nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-content:center;pointer-events:none}
+.nav-inner{width:calc(100% - 48px);max-width:var(--maxw);background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.72));backdrop-filter: blur(8px);border-radius:20px;padding:10px 18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:all}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{width:44px;height:44px;border-radius:10px;display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--accent),#8b5cf6);color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(91,33,182,0.18)}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
+.cta{background:var(--accent);color:#fff;padding:9px 14px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(91,33,182,0.14)}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #111827;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.nav-links.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff; 
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s ease;
+  z-index: 99; 
+}
+
+.nav-links.mobile a {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+}
+
+.nav-links.mobile a:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+
+
+.nav-links.mobile.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+@media (max-width: 640px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+
+header.hero{padding-top:100px;padding-bottom:48px}
+.hero-grid{display:grid;grid-template-columns:1fr 460px;gap:36px;align-items:center}
+.eyebrow{font-size:13px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+h1{font-size:48px;line-height:1.02;margin:8px 0 12px;font-weight:800}
+h1 .accent {
+  position: relative;
+  display: block;
+  background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  padding-bottom: 0.25em;
+  line-height: 1.25;
+  overflow: visible;
+  transform: translateY(0);
+}
+
+@supports (-webkit-touch-callout: none) {
+  .accent {
+    padding-bottom: 0.4em;
+    line-height: 1.3;
+    display: block;
+  }
+}
+
+h1 {
+  line-height: 1.25;
+  overflow: visible;
+  margin: 8px 0 12px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+}
+
+p.lead{color:var(--muted);max-width:66ch;font-size:14px;}
+.hero-ctas{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-block}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(91,33,182,0.12)}
+.btn-ghost{border:1px solid #e6e7ee;background:transparent;color:var(--muted)}
+
+.feature-card {
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  width: 60%;
+  max-width: 500px;
+  margin: 10px ; 
+  padding: 16px;
+  display: block;
+  position:relative;
+}
+
+
+.feature-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+
+.project-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+}
+
+.projects{padding:56px 20px;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .4s ease,box-shadow .4s ease;}
+.card:hover{transform:translateZ(5px);box-shadow:0 30px 50px rgba(17,24,39,0.8);}
+.card img{width:100%;height:180px;object-fit:cover;display:block;}
+.card .card-body{padding:14px;}
+.tags{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
+.tag{font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid #eef2ff;color:#374151;}
+
+
+.about{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:56px 0; margin: 20px ;}
+.portrait{border-radius:16px;overflow:hidden;box-shadow:0 30px 50px rgba(17,24,39,0.8);}
+
+
+form{width:400px;background:white;padding:2rem; margin: 20px ;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.1)}
+input,textarea{width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;font-size:1rem}
+button{background:#4a6cf7;color:white;border:none;padding:12px;width:100%;border-radius:8px;font-size:1rem;cursor:pointer;transition:0.3s}
+button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.2)}
+.msg{text-align:center;font-weight:600;margin-top:10px}
+#status{transition:color 0.3s ease, transform 0.3s ease}
+#status.success{color:#2ecc71;transform:scale(1.05)}
+#status.error{color:#e74c3c;transform:scale(1.05)}
+
+
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr 360px}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+  .feature-card img{height:260px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  h1{font-size:36px}
+  .projects-grid{grid-template-columns:1fr}
+  .brand span{display:none}
+  .floating{display:none}
+  form{width:90%;padding:1.5rem}
+}
+</style>
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#hero">
+        <div class="logo">DE</div>
+        <div>
+          <div style="font-weight:800">Destiny Ehimiyein</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Creative Developer • UI & Motion</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="ehis emal.html" class="cta">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-links mobile" id="mobileNav">
+    <a href="#projects">Work</a>
+    <a href="#about">About</a>
+    <a href="ehis emal.html" class="cta">Contact</a>
+  </div>
+
+  <header class="hero container" id="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Creative Developer — UI & Motion</div>
+       <h1>
+  Hi There I'm <b><span class="accent"><b>Destiny Ehimiyein</b></span></b>
+  <span id="type-target" style="display:inline-block; min-width:28ch;"></span>
+</h1>
+
+        <p class="lead">I design and build focused, motion-rich web experiences<br>combining clarity, performance and personality<br> to help products connect with people.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:22px">
+          <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);min-width:120px">
+            <div style="font-size:12px;color:var(--muted)">Years</div>
+            <div style="font-weight:800;font-size:20px">+4</div>
+          </div>
+          <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);min-width:120px">
+            <div style="font-size:12px;color:var(--muted)">Projects</div>
+            <div style="font-weight:800;font-size:20px">+18</div>
+          </div>
+        </div>
+      </div>
+     <section class="featured">
+  <div class="feature-card">
+    <img src="58b8dfc5-abe5-410e-aa53-167a98718ff0 (1).png" alt="Featured Project">
+    <h3>Featured — StudioFlow Landing</h3>
+    <p>Micro-interactions, responsive layout and animated CTAs to lift conversions.</p>
+  </div>
+</section>
+
+
+
+        <div class="floating" id="floatingCard" aria-hidden="true" style="margin-top:18px">
+          <div style="font-size:12px;color:var(--muted)">Latest</div>
+          <div style="font-weight:700;margin-top:6px">UI Kit updates</div>
+          <div style="font-size:12px;color:#9ca3af;margin-top:8px">Version 1.3 — motion primitives & tokens</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="projects container" id="projects">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div>
+        <h2 style="margin:0;font-size:22px;font-weight:800">Selected Work</h2>
+        <div class="muted" style="margin-top:6px">A hand-picked showcase of recent projects with motion-first UI.</div>
+      </div>
+      <div><a href="#" class="btn btn-ghost">See all</a></div>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <article class="card">
+        <img src="bitcoin-options-1.jpg" alt="NeoBrand">
+        <div class="card-body">
+          <div style="font-weight:700">Crypto-Currency</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">A sleek crypto trading app UI with micro-interactions and a live chat flows.</div>
+          <div class="tags"><span class="tag">React</span><span class="tag">Design</span><span class="tag">Animation</span><span class="tag">Javascript</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="ChatGPT Image Oct 25, 2025, 11_38_32 AM.png" alt="MatchPlay">
+        <div class="card-body">
+          <div style="font-weight:700">MatchPlay — Sports App</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">Realtime match feed with playful motion-driven transitions.</div>
+          <div class="tags"><span class="tag">Mobile</span><span class="tag">React</span><span class="tag">UX</span><span class="tag">Framer</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="StudioFlow">
+        <div class="card-body">
+          <div style="font-weight:700">StudioFlow — Landing</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">Marketing landing with bold hero, animated CTA & testimonial carousel.</div>
+          <div class="tags"><span class="tag">Landing</span><span class="tag">Motion</span><span class="tag">Performance</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about container" id="about">
+    <div>
+      <h3 style="margin:0;font-size:20px;font-weight:800">About me</h3>
+      <p class="muted" style="margin-top:12px">I’m a product-minded <b>Front-end Developer</b> who loves crafting thoughtful, motion-rich user interfaces. I care about performance, accessibility and building delightful experiences that feel alive.</p>
+      <ul style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px">
+        <li class="muted">Design systems</li>
+        <li class="muted">Prototyping</li>
+        <li class="muted">Micro-interactions</li>
+        <li class="muted">Responsive UI</li>
+      </ul>
+      <div style="margin-top:16px"><a download="Destiny_Ehimiyein_CV.pdf" class="btn btn-primary" href="#">Download CV</a></div>
+    </div>
+    <div>
+      <div class="portrait">
+        <img src="58b8dfc5-abe5-410e-aa53-167a98718ff0 (1).png" alt="portrait" style="width:100%;height:100%;display:block;object-fit:cover">
+      </div>
+      <div style="margin-top:12px;padding:12px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)">
+        <div style="font-weight:700">Available for freelance & remote roles.</div>
+        <div class="muted" style="margin-top:6px">Open to short-term and long-term collaborations.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <form id="contact-form">
+      <h2>Contact Destiny</h2>
+      <input type="text" name="from_name" placeholder="Your Name" required />
+      <input type="email" name="reply_to" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="msg" id="status"></div>
+    </form>
+  </section>
+
+ <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+emailjs.init("xsUFr6400Nt72pQLf"); 
+
+
+const form=document.getElementById("contact-form"),status=document.getElementById("status");
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+  status.textContent="Sending...";
+  emailjs.sendForm('service_6oesnf9','template_uo3iwwo',this)
+    .then(()=>{status.textContent="✅ Message sent successfully!";status.className="success";form.reset();})
+    .catch(err=>{console.error(err);status.textContent="❌ Failed to send message.";status.className="error";});
+});
+
+(function(){
+  const el=document.getElementById('type-target');
+  const strings=[' a Front-end Developer.','a UI/UX Designer.','a Graphic Designer'];
+  let si=0, idx=0, typing=true;
+  function tick(){
+    const full=strings[si];
+    el.textContent=full.slice(0,idx);
+    if(typing){
+      idx++;
+      if(idx>full.length){
+        typing=false;
+        setTimeout(tick,900);
+        return;
+      }
+    } else {
+      idx--;
+      if(idx<0){
+        typing=true;
+        si=(si+1)%strings.length;
+        idx=0;
+      }
+    }
+    setTimeout(tick, typing?80:30);
+  }
+  tick();
+})();
+
+
+
+const hamburger = document.getElementById("hamburger");
+const mobileNav = document.getElementById("mobileNav");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+});
+
+document.querySelectorAll("#mobileNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    mobileNav.classList.remove("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded",function(){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".hero .eyebrow, .hero h1, .hero p, .hero-ctas",{opacity:0,y:30,stagger:0.2,duration:1,ease:"power3.out"});
+  gsap.from("#feature",{opacity:0,x:60,duration:1,ease:"power3.out",delay:0.5});
+  gsap.to("#floatingCard",{y:10,repeat:-1,yoyo:true,duration:2,ease:"sine.inOut"});
+  gsap.utils.toArray(".projects-grid .card").forEach(card=>{
+    gsap.from(card,{scrollTrigger:{trigger:card,start:"top 80%"},opacity:0,y:50,duration:0.8,ease:"power3.out"});
+  });
+  gsap.from("#about > div",{scrollTrigger:{trigger:"#about",start:"top 80%"},opacity:0,y:40,stagger:0.2,duration:1,ease:"power3.out"});
+});
+</script>
+</body>
+</html>
