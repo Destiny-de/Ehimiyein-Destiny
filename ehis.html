@@ -12,24 +12,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 
 
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js" defer></script>
 
 <style>
 :root{
-  --bg:white;--card:#ffffff;--muted:#6b7280;--accent:#5b21b6;--radius:18px;--shadow:0 8px 30px rgba(17,24,39,0.08);--maxw:1200px;
+  --bg:black
+  ;--card:black;--muted:white;--accent:#5b21b6;--radius:18px;--shadow:0 8px 30px rgba(17,24,39,0.08);--maxw:1200px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:linear-gradient(180deg,var(--bg),#f3f4f6);color:#111827;-webkit-font-smoothing:antialiased;padding-bottom:80px}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:linear-gradient(180deg,var(--bg),black);color:white;-webkit-font-smoothing:antialiased;padding-bottom:80px}
 .container{max-width:var(--maxw);margin:10px;padding:9px;}
 
 
-nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-content:center;pointer-events:none}
-.nav-inner{width:calc(100% - 48px);max-width:var(--maxw);background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.72));backdrop-filter: blur(8px);border-radius:20px;padding:10px 18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:all}
+nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;;color:white;justify-content:center;pointer-events:none}
+.nav-inner{width:calc(100% - 48px);max-width:var(--maxw);background:linear-gradient(180deg,var(--bg),black),;color:white rgba((255,255,255,0.72));backdrop-filter: blur(8px);border-radius:20px;padding:10px 18px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;pointer-events:all}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
 .logo{width:44px;height:44px;border-radius:10px;display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--accent),#8b5cf6);color:#fff;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(91,33,182,0.18)}
-.nav-links{display:flex;gap:18px;align-items:center}
-.nav-links a{color:var(--muted);text-decoration:none;font-weight:600}
-.cta{background:var(--accent);color:#fff;padding:9px 14px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(91,33,182,0.14)}
+.nav-links{display:flex;gap:18px;;color:white;align-items:center}
+.nav-links a{color:var(--muted);;color:white;text-decoration:none;font-weight:600}
+.cta{background:var(--accent);color:white;padding:9px 14px;border-radius:12px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(91,33,182,0.14)}
 .hamburger {
   display: none;
   flex-direction: column;
@@ -40,7 +40,7 @@ nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-conte
 .hamburger div {
   width: 25px;
   height: 3px;
-  background: #111827;
+  background:white;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -60,7 +60,7 @@ nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-conte
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #fff; 
+  backdrop-filter: blur(8px);
   position: absolute;
   top: 80px;
   right: 30px;
@@ -75,7 +75,7 @@ nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-conte
 }
 
 .nav-links.mobile a {
-  color: #111827;
+  color: white;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.25s ease, color 0.25s ease;
@@ -106,6 +106,10 @@ nav{position:fixed;left:0;right:0;top:18px;z-index:60;display:flex;justify-conte
   .nav-links {
     display: none;
   }
+}
+
+.tags{
+  color: white;
 }
 
 
@@ -157,7 +161,7 @@ p.lead{color:var(--muted);max-width:66ch;font-size:14px;}
 .btn-ghost{border:1px solid #e6e7ee;background:transparent;color:var(--muted)}
 
 .feature-card {
-  background: var(--card);
+  background: black;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -207,7 +211,7 @@ p.lead{color:var(--muted);max-width:66ch;font-size:14px;}
 .portrait{border-radius:16px;overflow:hidden;box-shadow:0 30px 50px rgba(17,24,39,0.8);}
 
 
-form{width:400px;background:white;padding:2rem; margin: 20px ;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.1)}
+form{width:400px;background:black;padding:2rem; margin: 20px ;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.1)}
 input,textarea{width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;font-size:1rem}
 button{background:#4a6cf7;color:white;border:none;padding:12px;width:100%;border-radius:8px;font-size:1rem;cursor:pointer;transition:0.3s}
 button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.2)}
@@ -233,6 +237,68 @@ button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px
   .floating{display:none}
   form{width:90%;padding:1.5rem}
 }
+
+/* Overlay Blur Background */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Popup Animation */
+.popup {
+  background: white;
+  color: black;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  width: 320px;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.overlay.active .popup {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.popup.success {
+  border-top: 5px solid #2ecc71;
+}
+.popup.error {
+  border-top: 5px solid #e74c3c;
+}
+
+.popup button {
+  margin-top: 20px;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.popup button:hover {
+  background: #3557e0;
+}
+
 </style>
 </head>
 <body>
@@ -289,8 +355,8 @@ button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px
       </div>
      <section class="featured">
   <div class="feature-card">
-    <img src="58b8dfc5-abe5-410e-aa53-167a98718ff0 (1).png" alt="Featured Project">
-    <h3>Featured — StudioFlow Landing</h3>
+    <img src="f234b2b8-066d-4470-aff8-b00e3bf78f38 (2).png" alt="Featured Project">
+    <h3>Destiny Ehimiyein— Front-end Developer</h3>
     <p>Micro-interactions, responsive layout and animated CTAs to lift conversions.</p>
   </div>
 </section>
@@ -356,7 +422,7 @@ button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px
     </div>
     <div>
       <div class="portrait">
-        <img src="58b8dfc5-abe5-410e-aa53-167a98718ff0 (1).png" alt="portrait" style="width:100%;height:100%;display:block;object-fit:cover">
+        <img src="f234b2b8-066d-4470-aff8-b00e3bf78f38 (2).png" alt="portrait" style="width:100%;height:100%;display:block;object-fit:cover">
       </div>
       <div style="margin-top:12px;padding:12px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)">
         <div style="font-weight:700">Available for freelance & remote roles.</div>
@@ -364,31 +430,53 @@ button:hover{background:#3557e0;transform:translateY(-3px);box-shadow:0 5px 15px
       </div>
     </div>
   </section>
+  <form id="contact-form">
+    <h2>Contact Destiny</h2>
+    <input type="text" name="from_name" placeholder="Your Name" required />
+    <input type="email" name="reply_to" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <div class="msg" id="status"></div>
+  </form>
 
-  <section id="contact" class="container">
-    <form id="contact-form">
-      <h2>Contact Destiny</h2>
-      <input type="text" name="from_name" placeholder="Your Name" required />
-      <input type="email" name="reply_to" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-      <div class="msg" id="status"></div>
-    </form>
-  </section>
-
- <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-emailjs.init("xsUFr6400Nt72pQLf"); 
+window.addEventListener("load", () => {
+  emailjs.init("xsUFr6400Nt72pQLf"); // your actual Public Key
 
+  const form = document.getElementById("contact-form");
+  const overlay = document.getElementById("overlay");
+  const popup = document.getElementById("popup");
+  const popupTitle = document.getElementById("popup-title");
+  const popupMsg = document.getElementById("popup-msg");
+  const popupBtn = document.getElementById("popup-btn");
 
-const form=document.getElementById("contact-form"),status=document.getElementById("status");
-form.addEventListener("submit",function(e){
-  e.preventDefault();
-  status.textContent="Sending...";
-  emailjs.sendForm('service_6oesnf9','template_uo3iwwo',this)
-    .then(()=>{status.textContent="✅ Message sent successfully!";status.className="success";form.reset();})
-    .catch(err=>{console.error(err);status.textContent="❌ Failed to send message.";status.className="error";});
+  function showPopup(title, msg, isSuccess) {
+    popupTitle.textContent = title;
+    popupMsg.textContent = msg;
+    popup.className = "popup " + (isSuccess ? "success" : "error");
+    overlay.classList.add("active");
+  }
+
+  popupBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+  });
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_6oesnf9', 'template_uo3iwwo', this)
+      .then(() => {
+        showPopup("✅ Message Sent", "Thanks for reaching out! I’ll reply soon.", true);
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        showPopup("❌ Failed", "There was a problem sending your message.", false);
+      });
+  });
 });
+
+
 
 (function(){
   const el=document.getElementById('type-target');
@@ -445,5 +533,25 @@ document.addEventListener("DOMContentLoaded",function(){
   gsap.from("#about > div",{scrollTrigger:{trigger:"#about",start:"top 80%"},opacity:0,y:40,stagger:0.2,duration:1,ease:"power3.out"});
 });
 </script>
+<div class="overlay" id="overlay">
+  <div class="popup" id="popup">
+    <h3 id="popup-title">Success!</h3>
+    <p id="popup-msg">Your message has been sent.</p>
+    <button id="popup-btn">OK</button>
+  </div>
+</div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69013491d969451950a3ef9d/1j8mbamtr';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
