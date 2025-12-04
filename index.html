@@ -1,134 +1,185 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Destiny Ehimiyein | Web Designer & Developer</title>
-<meta name="description" content="I’m Destiny Ehimiyein — a modern web designer and developer building sleek, responsive websites using HTML, CSS, and JavaScript.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Destiny Ehimiyein</title>
+<link rel="icon" type="image/png" href="ChatGPT_Image_Dec_4__2025__10_35_45_AM-removebg-preview.png">
+ <link rel="stylesheet" href="style.css" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+
+<!-- SEO Meta Tags -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="title" content="Destiny Ehimiyein | Creative Developer & UI Designer">
+<meta name="description" content="I’m Destiny Ehimiyein, a creative front-end developer passionate about building modern, motion-rich, and responsive web experiences.">
+<meta name="keywords" content="Destiny Ehimiyein, web developer, front-end developer, portfolio, UI design, motion design, Nigeria">
+<meta name="author" content="Destiny Ehimiyein">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://destiny-de.github.io/Destiny-Ehimiyein/">
+
+<meta name="google-site-verification" content="a6e410df9ef36090">
+
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">YN</div>
-        <div>
-          <h1>Ehimiyein Destiny</h1>
-          <p>Front-end Engineer • UI Designer</p>
-        </div>
-      </div>
-
-      <nav>
-        <button class="btn link" data-scroll="#projects">Projects</button>
-        <button class="btn link" data-scroll="#about">About</button>
-        <a class="btn primary" href="email.html">Contact</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="card intro">
-        <h2>Hello — I'm <span class="type" id="type-target">Your Name.</span></h2>
-        <p>I build clean, modern, high-performance websites and interfaces. I focus on performance, accessibility and delightful details.</p>
-
-        <div class="socials">
-          <a class="chip" href="#">GitHub</a>
-          <a class="chip" href="#">Dribbble</a>
-          <a class="chip" href="#">LinkedIn</a>
-        </div>
-
-        <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
-          <a class="btn primary" href="#projects">See Work</a>
-          <a class="btn" href="email.html">Hire Me</a>
-        </div>
-
-        <div style="margin-top:20px;display:flex;gap:12px;align-items:center">
-          <div class="chip">Available for work</div>
-          <div class="small">Based in Lagos • Open to remote</div>
-        </div>
-      </div>
-
-      <aside class="card profile">
-        <div class="avatar">YN</div>
-        <div style="font-weight:700">Your Name</div>
-        <div class="small">Product-focused front-end developer</div>
-
-        <div class="stats" style="margin-top:8px">
-          <div class="stat">7+ Projects</div>
-          <div class="stat">4 yrs Exp</div>
-        </div>
-
-        <a class="btn" href="#" style="margin-top:12px">Download Resume</a>
-      </aside>
-    </section>
-
-    <section id="projects">
-      <div class="section-title">
-        <h3 style="margin:0">Selected Projects</h3>
-        <div class="small">A few recent case studies</div>
-      </div>
-
-      <div class="grid">
-        <article class="project">
-          <h3>Streaming UI Revamp</h3>
-          <p>Design and build of a dark, high-performance streaming player with keyboard shortcuts and custom animations.</p>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Accessibility</span>
-            <span class="tag">Animations</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <h3>E-Commerce Checkout</h3>
-          <p>Built a progressive, low-friction checkout flow improving conversions by focusing on clarity and speed.</p>
-          <div class="tags"><span class="tag">UX</span><span class="tag">Payments</span></div>
-        </article>
-
-        <article class="project">
-          <h3>Portfolio CMS</h3>
-          <p>Headless CMS + static site generator for fast content updates and excellent SEO.</p>
-          <div class="tags"><span class="tag">Jamstack</span><span class="tag">Node</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" style="margin-top:36px">
-      <div class="section-title"><h3 style="margin:0">About</h3><div class="small">What I care about</div></div>
-      <div class="card">
-        <p class="small">I solve product problems with polished UI and pragmatic code. I enjoy working closely with product teams to ship thoughtful interfaces that scale. I care about accessibility, maintainability and measurable outcomes.</p>
-
-        <ul style="margin-top:12px;color:var(--muted);">
-          <li>Modern HTML/CSS architecture</li>
-          <li>Interactive micro-interactions</li>
-          <li>Performance tuning & Lighthouse optimizations</li>
-        </ul>
-      </div>
-    </section>
-
   
-
-
-
-      
-
-        <div style="min-width:260px;flex:0.6">
-          <div class="small">Quick info</div>
-          <div class="card" style="margin-top:12px;padding:14px;border-radius:12px;">
-            <p class="small" style="margin:0">Based in Lagos, Nigeria — available for remote and freelance work. I typically respond within 24–48 hours.</p>
-          </div>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#hero">
+        <div class="logo"></div>
+        <div>
+          <div style="font-weight:800">Destiny Ehimiyein</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Creative Developer • UI & Motion</div>
         </div>
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="ehis emal.html" class="cta">Contact</a>
       </div>
-    </section>
-
-    <footer>
-      <div>© <span id="2025"></span> Ehimiyein Destiny • </div>
-    </footer>
+      <div class="hamburger" id="hamburger">
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-links mobile" id="mobileNav">
+    <a href="#projects">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact-form" class="cta">Contact</a>
   </div>
 
-  <script src="main.js" defer></script>
- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <header class="hero container" id="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Creative Developer — UI/UX & Motion</div>
+       <h1>
+  Hi There I'm <b><span class="accent"><b>Destiny Ehimiyein</b></span></b>
+  <span id="type-target" style="display:inline-block; min-width:15ch;"></span>
+</h1>
+
+        <p class="lead">I design and build focused, motion-rich web experiences<br>combining clarity, performance and personality<br> to help products connect with people.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+        </div>
+        <div style="display:flex;gap:14px;margin-top:22px">
+          <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);min-width:120px">
+            <div style="font-size:12px;color:var(--muted)">Years</div>
+            <div style="font-weight:800;font-size:20px">+4</div>
+          </div>
+          <div style="background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);min-width:120px">
+            <div style="font-size:12px;color:var(--muted)">Projects</div>
+            <div style="font-weight:800;font-size:20px">+18</div>
+          </div>
+        </div>
+      </div>
+     <section class="featured">
+  <div class="feature-card">
+  <img src="images/f234b2b8-066d-4470-aff8-b00e3bf78f38 (2).png"
+ alt="Featured Project">
+    <h3>Destiny Ehimiyein— Front-end Developer</h3>
+    <p>Micro-interactions, responsive layout and animated CTAs to lift conversions.</p>
+  </div>
+</section>
 
 
+
+        <div class="floating" id="floatingCard" aria-hidden="true" style="margin-top:18px">
+          <div style="font-size:12px;color:var(--muted)">Latest</div>
+          <div style="font-weight:700;margin-top:6px">UI Kit updates</div>
+          <div style="font-size:12px;color:#9ca3af;margin-top:8px">Version 1.3 — motion primitives & tokens</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="projects container" id="projects">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div>
+        <h2 style="margin:0;font-size:22px;font-weight:800">Selected Work</h2>
+        <div class="muted" style="margin-top:6px">A hand-picked showcase of recent projects with motion-first UI.</div>
+      </div>
+     
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <article class="card">
+      <img src="images/bitcoin-options-1.jpg"
+ alt="NeoBrand">
+        <div class="card-body">
+          <div style="font-weight:700">Crypto-Currency</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">A sleek crypto trading app UI with micro-interactions and a live chat flows.</div>
+          <div class="tags"><span class="tag">React</span><span class="tag">Design</span><span class="tag">Animation</span><span class="tag">Javascript</span></div>
+        </div>
+      </article>
+      <article class="card">
+       <img src="images/ChatGPT Image Oct 25, 2025, 11_38_32 AM.png"
+ alt="MatchPlay">
+        <div class="card-body">
+          <div style="font-weight:700">MatchPlay — Sports App</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">Realtime match feed with playful motion-driven transitions.</div>
+          <div class="tags"><span class="tag">Mobile</span><span class="tag">React</span><span class="tag">UX</span><span class="tag">Framer</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="StudioFlow">
+        <div class="card-body">
+          <div style="font-weight:700">StudioFlow — Landing</div>
+          <div class="muted" style="margin-top:8px;font-size:14px">Marketing landing with bold hero, animated CTA & testimonial carousel.</div>
+          <div class="tags"><span class="tag">Landing</span><span class="tag">Motion</span><span class="tag">Performance</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about container" id="about">
+    <div>
+      <h3 style="margin:0;font-size:20px;font-weight:800">About me</h3>
+      <p class="muted" style="margin-top:12px">I’m a product-minded <b>Front-end Developer</b> who loves crafting thoughtful, motion-rich user interfaces. I care about performance, accessibility and building delightful experiences that feel alive.</p>
+      <ul style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px">
+        <li class="muted">Design systems</li>
+        <li class="muted">Prototyping</li>
+        <li class="muted">Micro-interactions</li>
+        <li class="muted">Responsive UI</li>
+      </ul>
+      <div style="margin-top:16px"><a download="Destiny_Ehimiyein_CV.pdf" class="btn btn-primary" href="Untitled document.pdf">Download CV</a></div>
+    </div>
+    <div>
+      <div class="portrait">
+       <img src="images/f234b2b8-066d-4470-aff8-b00e3bf78f38 (2).png"
+ alt="portrait" style="width:100%;height:100%;display:block;object-fit:cover">
+      </div>
+      <div style="margin-top:12px;padding:12px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)">
+        <div style="font-weight:700">Available for freelance & remote roles.</div>
+        <div class="muted" style="margin-top:6px">Open to short-term and long-term collaborations.</div>
+      </div>
+    </div>
+  </section>
+  <form id="contact-form">
+    <h2>Contact Destiny</h2>
+    <input type="text" name="from_name" placeholder="Your Name" required />
+    <input type="email" name="reply_to" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+    <div class="msg" id="status"></div>
+  </form>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+ <script src="main.js"></script>
+<div class="overlay" id="overlay">
+  <div class="popup" id="popup">
+    <h3 id="popup-title">Success!</h3>
+    <p id="popup-msg">Your message has been sent.</p>
+    <button id="popup-btn">OK</button>
+  </div>
+</div>
+
+  <footer>
+      <div>© <span id="2025"></span> 2025 • Destiny Ehimiyein • </div>
+    </footer>
+  </div>
 
 </body>
 </html>
